@@ -9,7 +9,7 @@ public class TextContainer {
     }
 
     @Saver
-    public void save(String text, String path) {
+    public static void save(String text, String path) {
         File file = new File(path);
         try(FileOutputStream os = new FileOutputStream(file)){
             os.write(text.getBytes(StandardCharsets.UTF_8));

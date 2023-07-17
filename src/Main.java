@@ -35,7 +35,7 @@ public class Main {
             for (Method method: methods){
                 if (method.isAnnotationPresent(Saver.class)) {
                     try {
-                        method.invoke(obj, cls.getDeclaredField("text").get(obj), cls.getAnnotation(SaveTo.class).path());
+                        method.invoke(null, cls.getDeclaredField("text").get(obj), cls.getAnnotation(SaveTo.class).path());
                     } catch (IllegalAccessException e) {
                         throw new RuntimeException(e);
                     } catch (InvocationTargetException e) {
